@@ -1,11 +1,49 @@
 ﻿@page "/viewadults"
+@using Models
+@using FileData
 
 <h1>List of Adults</h1>
 
-
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Job Title</th>
+            <th>Hair Colour</th>
+            <th>Eye Colour</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>Sex</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in adults) {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.FirstName</td>
+                    <td>@person.LastName</td>
+                    <td>@person.JobTitle</td>
+                    <td>@person.HairColor</td>
+                    <td>@person.EyeColor</td>
+                    <td>@person.Age</td>
+                    <td>@person.Weight</td>
+                    <td>@person.Height</td>
+                    <td>@person.Sex</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 
 @code {
+    private static FileContext fileContext = new FileContext();
+    private IList<Adult> adults = fileContext.Adults;
+    
     
 }
 
