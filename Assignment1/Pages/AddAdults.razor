@@ -1,0 +1,48 @@
+﻿@page "/addadults"
+@using Models
+@using FileData
+
+
+<h1>Adult Adder</h1>
+
+<p>To create an adult, please fill out the information: </p>
+
+<form>
+    <label for="id">Id:</label>
+    <input type="int" id="id" name="id" @Bind="person.Id"><br>
+    
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" @Bind="person.FirstName"><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" @Bind="person.LastName"><br>
+
+    <label for="age">Age:</label>
+    <input type="int" id="age" name="age" @Bind="person.Age"><br>
+
+    <label for="weight">Weight:</label>
+    <input type="float" id="weight" name="weight" @Bind="person.Weight"><br>
+
+    <label for="height">Height:</label>
+    <input type="int" id="height" name="height" @Bind="person.Height"><br>
+
+    <label for="sex">Sex:</label>
+    <input type="text" id="sex" name="sex" @Bind="person.Sex"><br>
+</form>
+
+<button class="btn btn-primary" @onclick="SaveAdultToFile">Add Adult</button>
+
+
+
+@code {
+
+    private Person person = new Adult();
+
+    private void SaveAdultToFile() {
+        FileContext fileContext = new FileContext();
+        
+        fileContext.SaveChanges();
+
+    }
+
+}
