@@ -7,50 +7,91 @@
 
 <p>To create an adult, please fill out the information: </p>
 
-<form>
-    <label for="id">Id:</label>
-    <input type="int" id="id" name="id" @Bind="person.Id"><br>
-    
-    <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname" @Bind="person.FirstName"><br>
-
-    <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname" @Bind="person.LastName"><br>
-
-    <label for="haircolor"></label>
-    <select name="haircolors" id="haircolors" @bind="person.HairColor">
-        @foreach (var color in hairColors) {
-            <option value="@color">@color.Name</option>
-        }
-        
-    </select>
+<EditForm Model="@person" OnValidSubmit="@SaveAdultToFile">
     
     
-    <label for="age">Age:</label>
-    <input type="int" id="age" name="age" @Bind="person.Age"><br>
+    <div class="form-group">
+        Id: <br/>
+        <InputNumber @bind-Value="person.Id"/>
+    </div>
+    
+    <div class="form-group">
+        First Name: <br/>
+        <InputText @bind-Value="person.FirstName"/>
+    </div>
+    
+    <div class="form-group">
+        Last Name: <br/>
+        <InputText @bind-Value="person.LastName"/>
+    </div>
+    
+    <div class="form-group">
+        Hair Colour: <br/>
+        <InputSelect @bind-Value="person.HairColor">
+            @foreach (var color in hairColors) {
+                <option>@color</option>
+            }
+        </InputSelect>
+    </div>
+    
+    <div class="form-group">
+        Eye Colour: <br/>
+        <InputSelect @bind-Value="person.EyeColor">
+            @foreach (var color in eyeColors) {
+                <option>@color</option>
+            }
+        </InputSelect>
+    </div>
+    
+    <div class="form-group">
+        Age: <br/>
+        <InputNumber @bind-Value="person.Age"/>
+    </div>
+    
+    <div class="form-group">
+        Weight: <br/>
+        <InputNumber @bind-Value="person.Weight"/>
+    </div>
+    
+    <div class="form-group">
+        Height: <br/>
+        <InputNumber @bind-Value="person.Height"/>
+    </div>
+    
+    <div class="form-group">
+        Sex: <br/>
+        <InputSelect @bind-Value="person.Sex">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </InputSelect>
+    </div>
+    
+    <div class="form-group">
+        Job: <br/>
+        <InputText @bind-Value="person.JobTitle"/>
+    </div>
 
-    <label for="weight">Weight:</label>
-    <input type="float" id="weight" name="weight" @Bind="person.Weight"><br>
+    <p class="action">
+        <button class="btn btn-primary" type="submit">Add Adult</button>
+    </p>
+</EditForm>
 
-    <label for="height">Height:</label>
-    <input type="int" id="height" name="height" @Bind="person.Height"><br>
-
-    <label for="sex">Sex:</label>
-    <input type="text" id="sex" name="sex" @Bind="person.Sex"><br>
-</form>
-
-<button class="btn btn-primary" @onclick="SaveAdultToFile">Add Adult</button>
 
 
 
 @code {
+    private string[] hairColors = {"Blond", "Red", "Brown", "Black", "White", "Grey", "Blue", "Green", "Leverpostej"};
+    private string[] eyeColors = {"Black", "Brown", "Grey", "Green", "Blue", "Amber", "Hazel"};
 
-    private Person person = new Adult();
+    private Adult person = new Adult();
     
-    private string[] hairColors = {"blond", "red", "brown", "black", "white", "grey", "blue", "green", "leverpostej"}
-
+    
     private void SaveAdultToFile() {
         FileContext fileContext = new FileContext();
+        IList<Adult> adults = fileContext.Adults;
+        
+        adults.Add(person);
         
         fileContext.SaveChanges();
 

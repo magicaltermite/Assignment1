@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\magic\\Desktop\\Mappe 1\\VIA University\\3 Semester\\DNP1\\Opgaver\\Assignment 1\\Assignment1\\Assignment1\\Assignment1\\Assignment1.csproj",
+    "projectUniqueName": "D:\\VIA\\3 Semester\\DNP1\\Assignment 1 - Website\\Assignment1\\Assignment1.csproj",
     "projectName": "Assignment1",
-    "projectPath": "C:\\Users\\magic\\Desktop\\Mappe 1\\VIA University\\3 Semester\\DNP1\\Opgaver\\Assignment 1\\Assignment1\\Assignment1\\Assignment1\\Assignment1.csproj",
-    "outputPath": "C:\\Users\\magic\\Desktop\\Mappe 1\\VIA University\\3 Semester\\DNP1\\Opgaver\\Assignment 1\\Assignment1\\Assignment1\\Assignment1\\obj\\",
+    "projectPath": "D:\\VIA\\3 Semester\\DNP1\\Assignment 1 - Website\\Assignment1\\Assignment1.csproj",
+    "outputPath": "D:\\VIA\\3 Semester\\DNP1\\Assignment 1 - Website\\Assignment1\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -46,7 +46,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
     }
   }
 }

@@ -5,11 +5,11 @@ using Models;
 
 namespace FileData {
 public class FileContext {
-    public IList<Family> Families { get; private set; }
+    //public IList<Family> Families { get; private set; }
     public IList<Adult> Adults { get; private set; }
 
     //private readonly string familiesFile = "families.json";
-    private readonly string adultsFile = "adults.json";
+    private readonly string adultsFile = "SaveFiles/adults.json";
 
     public FileContext() {
         //Families = File.Exists(familiesFile) ? ReadData<Family>(familiesFile) : new List<Family>();
@@ -23,7 +23,7 @@ public class FileContext {
     }
 
     public void SaveChanges() {
-        // storing families
+    //    storing families
     //    string jsonFamilies = JsonSerializer.Serialize(Families, new JsonSerializerOptions {
     //        WriteIndented = true
     //    });
