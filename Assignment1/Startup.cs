@@ -39,10 +39,6 @@ namespace Assignment1
             {
                 options.AddPolicy("AddAdults", a =>
                     a.RequireAuthenticatedUser().RequireClaim("Level", "5"));
-                
-                options.AddPolicy("MustBeVIA", a =>
-                    a.RequireAuthenticatedUser().RequireClaim("Domain", "via.dk"));
-
             });
         }
 
