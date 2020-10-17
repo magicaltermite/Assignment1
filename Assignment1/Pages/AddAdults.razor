@@ -1,9 +1,10 @@
 ﻿@page "/addadults"
 @using Models
 @using FileData
+@attribute [Authorize(Policy = "MustBeVIA")]
 
 
-<h1>Adult Adder</h1>
+<h1>  Adult Adder</h1>
 
 <p>To create an adult, please fill out the information: </p>
 
