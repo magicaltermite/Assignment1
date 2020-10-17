@@ -20,7 +20,7 @@ namespace Data.Implementation
                     Domain = "via.dk",
                     Password = "123",
                     Role = "Student",
-                    BirthYear = 1986,
+                    BirthYear = 1990,
                     SecurityLevel = 5,
                     UserName = "Sonny"
                 },
@@ -29,31 +29,12 @@ namespace Data.Implementation
                     City = "Horsens",
                     Domain = "via.dk",
                     Password = "123456",
-                    Role = "Teacher",
-                    BirthYear = 1986,
-                    SecurityLevel = 5,
-                    UserName = "Troels"
-                },
-                new User
-                {
-                    City = "Aarhus",
-                    Domain = "hotmail.com",
-                    Password = "123456",
                     Role = "Student",
-                    BirthYear = 1998,
-                    SecurityLevel = 3,
-                    UserName = "Jakob"
-                },
-                new User
-                {
-                    City = "Vejle",
-                    Domain = "via.com",
-                    Password = "123456",
-                    Role = "Guest",
-                    BirthYear = 1973,
+                    BirthYear = 2000,
                     SecurityLevel = 1,
-                    UserName = "Kasper"
-                }
+                    UserName = "Markus"
+                },
+                
             }.ToList();
         }
 
