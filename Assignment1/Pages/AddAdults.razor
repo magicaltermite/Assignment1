@@ -90,9 +90,8 @@
     
     private void SaveAdultToFile() {
         FileContext fileContext = new FileContext();
-        IList<Adult> adults = fileContext.Adults;
         
-        adults.Add(person);
+        fileContext.Adults.Add(person);
         
         fileContext.SaveChanges();
 

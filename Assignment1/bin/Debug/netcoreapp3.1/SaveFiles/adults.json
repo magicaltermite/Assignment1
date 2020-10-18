@@ -502,41 +502,5 @@
     "Weight": 100.9,
     "Height": 177,
     "Sex": "F"
-  },
-  {
-    "JobTitle": "Teacher",
-    "Id": 31,
-    "FirstName": "Mega",
-    "LastName": "Fish",
-    "HairColor": "Red",
-    "EyeColor": "Brown",
-    "Age": 31,
-    "Weight": 131,
-    "Height": 131,
-    "Sex": "Male"
-  },
-  {
-    "JobTitle": "asd",
-    "Id": 2,
-    "FirstName": "Sonny",
-    "LastName": "Haack",
-    "HairColor": null,
-    "EyeColor": null,
-    "Age": 11111,
-    "Weight": 1,
-    "Height": 22,
-    "Sex": null
-  },
-  {
-    "JobTitle": "asd",
-    "Id": 2,
-    "FirstName": "Sonny",
-    "LastName": "Haack",
-    "HairColor": null,
-    "EyeColor": null,
-    "Age": 11111,
-    "Weight": 1,
-    "Height": 22,
-    "Sex": null
   }
 ]
