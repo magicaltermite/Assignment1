@@ -30,7 +30,7 @@ namespace Data.Implementation
                     Domain = "via.dk",
                     Password = "123456",
                     Role = "Student",
-                    BirthYear = 2000,
+                    BirthYear = 1999,
                     SecurityLevel = 1,
                     UserName = "Markus"
                 },

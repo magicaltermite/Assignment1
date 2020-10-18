@@ -60,15 +60,15 @@
         }
         else {
             foreach (var person in adults) {
-                if (person.ToString().ToLower().Contains(id)) {
+                if (person.ToString().ToLower().Contains(id.ToLower())) {
                     newAdults.Add(person);
                     
                 }
             }
             adults = newAdults;
         }
-        }
     }
+    
 
 }
 

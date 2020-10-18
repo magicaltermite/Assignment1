@@ -504,15 +504,15 @@
     "Sex": "F"
   },
   {
-    "JobTitle": "Teacher",
-    "Id": 31,
-    "FirstName": "Mega",
-    "LastName": "Fish",
-    "HairColor": "Red",
-    "EyeColor": "Brown",
-    "Age": 31,
-    "Weight": 131,
-    "Height": 131,
+    "JobTitle": "Student",
+    "Id": 50,
+    "FirstName": "Markus",
+    "LastName": "Lorensen",
+    "HairColor": "Brown",
+    "EyeColor": "Blue",
+    "Age": 21,
+    "Weight": 65,
+    "Height": 185,
     "Sex": "Male"
   }
 ]
