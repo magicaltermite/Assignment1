@@ -28,7 +28,7 @@ namespace Data.Implementation
                 {
                     City = "Horsens",
                     Domain = "via.dk",
-                    Password = "123456",
+                    Password = "123",
                     Role = "Student",
                     BirthYear = 2000,
                     SecurityLevel = 1,
