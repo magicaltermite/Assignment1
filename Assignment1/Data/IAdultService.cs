@@ -7,7 +7,7 @@ namespace Assignment1.Data
 {
     public interface IAdultService
     {
-        Task<IList<Adult>> GetAdultAsync();
+        Task<IList<Adult>> GetAdultsAsync();
         Task AddAdultAsync(Adult adult);
         Task RemoveAdultAsync(int adultId);
         Task UpdateAdultAsync(Adult adult);

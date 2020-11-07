@@ -13,12 +13,8 @@
 <EditForm Model="@adultItem" OnValidSubmit="@SaveAdultToFile">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
-    
-    <div class="form-group">
-        Id: <br/>
-        <InputNumber @bind-Value="adultItem.Id"/>
-    </div>
-    
+
+
     <div class="form-group">
         First Name: <br/>
         <InputText @bind-Value="adultItem.FirstName"/>
@@ -92,7 +88,13 @@
     
     
     private void SaveAdultToFile() {
-        AdultService.AddAdultAsync(adultItem);
+        try {
+            AdultService.AddAdultAsync(adultItem);
+        }
+        catch (NullReferenceException e) {
+            Console.WriteLine(e);
+            throw;
+        }
 
     }
 

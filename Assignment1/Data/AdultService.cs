@@ -10,7 +10,8 @@ namespace Assignment1.Data
 {
     public class AdultService : IAdultService
     {
-        private string uri = "http://dnp.metamate.me";
+        //private string uri = "http://dnp.metamate.me";
+        private string uri = "https://localhost:5005";
         private readonly HttpClient client;
 
 
@@ -19,12 +20,13 @@ namespace Assignment1.Data
         }
         
         
-        public async Task<IList<Adult>> GetAdultAsync() {
-            string message = await client.GetStringAsync(uri + "/Adults");
+        public async Task<IList<Adult>> GetAdultsAsync() {
+            Task<string> stringAsync = client.GetStringAsync(uri + "/Adults");
+            string message = await stringAsync;
 
-            Console.WriteLine(message);
             List<Adult> result = JsonSerializer.Deserialize<List<Adult>>(message);
-           
+            Console.WriteLine(message);
+
             return result;
         }
 
