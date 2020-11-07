@@ -502,5 +502,41 @@
     "Weight": 100.9,
     "Height": 177,
     "Sex": "F"
+  },
+  {
+    "JobTitle": "Student",
+    "Id": 50,
+    "FirstName": "Markus",
+    "LastName": "Lorensen",
+    "HairColor": "Brown",
+    "EyeColor": "Blue",
+    "Age": 21,
+    "Weight": 65,
+    "Height": 185,
+    "Sex": "Male"
+  },
+  {
+    "JobTitle": "asd",
+    "Id": 2,
+    "FirstName": "Sonny",
+    "LastName": "Haack",
+    "HairColor": null,
+    "EyeColor": null,
+    "Age": 11111,
+    "Weight": 1,
+    "Height": 22,
+    "Sex": null
+  },
+  {
+    "JobTitle": "asd",
+    "Id": 2,
+    "FirstName": "Sonny",
+    "LastName": "Haack",
+    "HairColor": null,
+    "EyeColor": null,
+    "Age": 11111,
+    "Weight": 1,
+    "Height": 22,
+    "Sex": null
   }
 ]

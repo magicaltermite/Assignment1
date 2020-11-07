@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Assignment1.Authentication;
 using Data;
-using Data.Implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -14,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Security.Claims;
+using Assignment1.Data;
 
 namespace Assignment1
 {
@@ -32,6 +32,7 @@ namespace Assignment1
             services.AddServerSideBlazor();
             
             // Login
+            services.AddSingleton<IAdultService, AdultService>();
             services.AddScoped<IUserService, InMemoryUserService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             

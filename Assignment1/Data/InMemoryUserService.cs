@@ -4,7 +4,7 @@ using System.Linq;
 using Data;
 using Models;
 
-namespace Data.Implementation
+namespace Assignment1.Data
 {
     public class InMemoryUserService : IUserService
     {
