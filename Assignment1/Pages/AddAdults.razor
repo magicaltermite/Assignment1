@@ -61,6 +61,7 @@
     <div class="form-group">
         Sex: <br/>
         <InputSelect @bind-Value="adultItem.Sex">
+            <option></option>
             <option>Male</option>
             <option>Female</option>
             <option>Other</option>
@@ -81,8 +82,8 @@
 
 
 @code {
-    private string[] hairColors = {"Blond", "Red", "Brown", "Black", "White", "Grey", "Blue", "Green", "Leverpostej"};
-    private string[] eyeColors = {"Black", "Brown", "Grey", "Green", "Blue", "Amber", "Hazel"};
+    private string[] hairColors = {"", "Blond", "Red", "Brown", "Black", "White", "Grey", "Blue", "Green", "Leverpostej"};
+    private string[] eyeColors = {"", "Black", "Brown", "Grey", "Green", "Blue", "Amber", "Hazel"};
 
     private Adult adultItem = new Adult();
     
