@@ -18,17 +18,14 @@ namespace Assignment1.Data
         
         public async Task<User> ValidateUser(string userName, string password)
         {
-            Console.WriteLine(userName + password);
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://localhost:5005/users?username=Sonny&password=123");
+            HttpResponseMessage response = await client.GetAsync($"{uri}/users?username={userName}&password={password}");
 
             if (response.StatusCode == HttpStatusCode.OK) {
                 string userAsJson = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(userAsJson + "user");
                 
                 User resultUser = JsonSerializer.Deserialize<User>(userAsJson);
 
-                Console.WriteLine(resultUser);
                 return resultUser;
             }
             throw new Exception("User not found");
