@@ -33,7 +33,7 @@ namespace Assignment1
             
             // Login
             services.AddSingleton<IAdultService, AdultService>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddScoped<IUserService, UserWebService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             
             services.AddAuthorization(options =>

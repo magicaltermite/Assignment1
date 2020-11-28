@@ -25,7 +25,7 @@ namespace Assignment1.Data
             string message = await stringAsync;
 
             List<Adult> result = JsonSerializer.Deserialize<List<Adult>>(message);
-            Console.WriteLine(message);
+            // Console.WriteLine(message);
 
             return result;
         }
